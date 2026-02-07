@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>A Special Message ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="envelope-wrapper">
+    <div class="envelope" onclick="openLetter()">
+      <div class="flap"></div>
+      <div class="label">Touch to Open 💌</div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <span class="close-btn" onclick="closeLetter()">×</span>
+      <img id="mainImage" src="love.png" alt="Love Image">
+      <div class="question" id="question">Will you be my Valentine? 💖</div>
+      <div class="buttons" id="btnGroup">
+        <button class="btn yes" onclick="answerYes()">Yes!</button>
+        <button class="btn no" id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
